@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Employee Management</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Employee Management</h1>
+
+        <h2>Create Employee</h2>
+        <form id="create-employee-form">
+            <input type="text" id="name" placeholder="Name" required>
+            <input type="email" id="email" placeholder="Email" required>
+            <button type="submit">Create</button>
+        </form>
+
+        <h2>Get All Employees</h2>
+        <button onclick="fetchEmployees()">Fetch All Employees</button>
+        <table id="employee-table">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Name</th>
+                    <th>Email</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Employee data will be inserted here -->
+            </tbody>
+        </table>
+
+        <h2>Get Employee By ID</h2>
+        <input type="number" id="employee-id" placeholder="Employee ID" required>
+        <button onclick="fetchEmployeeById()">Fetch Employee</button>
+        <div id="employee-details">
+            <!-- Employee details will be displayed here -->
+        </div>
+    </div>
+
+    <script src="scripts.js"></script>
+</body>
+</html>
